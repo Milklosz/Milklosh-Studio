@@ -14,156 +14,270 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="bar">
-  <div class="wrap">
+<header class="bar" id="bar">
+  <div class="bar-in">
     <a class="brand" href="#top" aria-label="Milklosh studio, na górę strony">
-      <img src="assets/img/znak.png" alt="" width="30" height="30">
-      Milklosh <span>studio</span>
+      <img src="assets/img/znak.png" alt="" width="28" height="28">
+      <span>Milklosh <em>studio</em></span>
     </a>
-    <nav aria-label="Główna">
-      <a href="#socketborn" class="wide">Socketborn</a>
-      <a href="#barierka" class="wide">Barierka</a>
-      <a href="#studio">Kontakt</a>
-      <a href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">TikTok</a>
+    <nav class="links" id="menu" aria-label="Główna">
+      <a href="#socketborn">Socketborn</a>
+      <a href="#barierka">Barierka</a>
+      <a href="#kulisy">Kulisy</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="m-only" href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">TikTok ↗</a>
     </nav>
+    <a class="pill-link" href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">TikTok</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span><span></span>
+    </button>
   </div>
 </header>
 
 <main id="top">
+
+  <!-- HERO -->
   <section class="hero">
-    <div class="grid-lines" aria-hidden="true"></div>
-    <div class="wrap">
-      <img class="hero-mark" src="assets/img/znak.png" alt="" width="112" height="112">
-      <h1>Milklosh <span class="light">studio</span></h1>
-      <p>Robimy gry, w których ruch jest najważniejszy. Biegasz po barierkach, przeskakujesz po kablach, a miasto staje się Twoją trasą.</p>
+    <div class="hero-bg" aria-hidden="true">
+      <img src="assets/img/hero-plac-noca.webp" alt="" width="1340" height="555">
+    </div>
+    <canvas class="sparks" aria-hidden="true"></canvas>
+    <div class="shell hero-in">
+      <p class="eyebrow">Niezależne studio gier</p>
+      <h1>Gry, w których <span class="glow">miasto</span> jest&nbsp;trasą.</h1>
+      <p class="lead">Milklosh studio robi gry o ruchu. W Socketborn przeskakujesz po liniach energetycznych nad Warszawą, w Barierce biegniesz po autostradowej barierce, zanim spadnie zmrok.</p>
+      <div class="cta">
+        <a class="btn" href="#barierka">Zagraj w Barierkę</a>
+        <a class="btn ghost" href="#socketborn">Poznaj Socketborn</a>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="posters">
+        <a class="poster" href="#socketborn">
+          <img src="assets/img/moc-wysysanie.webp" alt="" loading="eager" width="1100" height="619">
+          <span class="poster-txt">
+            <span class="chip live">W produkcji</span>
+            <b>Socketborn</b>
+            <span>Akcja w otwartym świecie · 3D · macOS</span>
+          </span>
+        </a>
+        <a class="poster pixel" href="#barierka">
+          <img src="assets/img/barierka-miasto-noca.webp" alt="" loading="eager" width="1200" height="624">
+          <span class="poster-txt">
+            <span class="chip ok">Do zagrania teraz</span>
+            <b class="px">Barierka</b>
+            <span>Pikselowy runner · przeglądarka i telefon</span>
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="gry" aria-labelledby="gry-h">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Gry</span>
-        <h2 id="gry-h">Dwie gry, jedna obsesja na punkcie ruchu</h2>
+  <!-- SOCKETBORN -->
+  <section class="game-sec" id="socketborn" aria-labelledby="sb-h">
+    <div class="shell">
+      <header class="sec-head">
+        <p class="eyebrow">Gra w produkcji</p>
+        <h2 id="sb-h" class="sb-title">Socketborn</h2>
+        <p class="sub">Zamień ciało w prąd. Miasto jest Twoją siecią.</p>
+      </header>
+
+      <div class="story reveal">
+        <div class="story-txt">
+          <p class="big"><strong>Karola trafia piorun.</strong> Budzi się w szpitalu, w którym skalpel nie przecina mu skóry, a lampy na sali ładują go jak baterię.</p>
+          <p>Kilka minut później cały kraj szuka potwora, a miliarder Henryk Vanderholt wypuszcza na miasto swoje drony bojowe. Karol musi nauczyć się własnej mocy, zanim ktoś zrobi z niej broń.</p>
+          <div class="chips">
+            <span class="chip live">W produkcji</span>
+            <span class="chip">macOS</span>
+            <span class="chip">Godot 4</span>
+            <span class="chip">Kampania fabularna</span>
+          </div>
+          <a class="btn ghost" href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">Śledź postępy na TikToku</a>
+        </div>
+        <figure class="phone">
+          <video controls playsinline preload="none" poster="assets/video/zwiastun-poster.webp" width="540" height="960">
+            <source src="assets/video/socketborn-zwiastun.mp4" type="video/mp4">
+          </video>
+          <figcaption>Zwiastun z rozgrywki · 35 s</figcaption>
+        </figure>
       </div>
 
-      <!-- Socketborn -->
-      <article class="game" id="socketborn" aria-labelledby="sb-h">
-        <div class="game-art">
-          <img src="assets/img/hero-plac-noca.webp" alt="Nocna Warszawa z lotu: wieżowce Woli i plac budowy przy Towarowej" width="1340" height="555">
-          <div class="game-title">
-            <div class="chips">
-              <span class="chip live">W produkcji</span>
-              <span class="chip">3D · macOS</span>
-            </div>
-            <h3 id="sb-h">Socketborn</h3>
-            <p class="tagline">Zamień ciało w prąd. Miasto jest Twoją siecią.</p>
-          </div>
-        </div>
+      <h3 class="mini-h">Co potrafi Karol</h3>
+      <div class="bento">
+        <article class="tile t-wide reveal">
+          <img src="assets/img/moc-przeskok.webp" alt="Wyścig po kablach nad ulicami Woli" loading="lazy" width="1100" height="619">
+          <div class="tile-txt"><b>Przeskok po liniach</b><span>Zamieniasz się w prąd i lecisz trakcją tramwajową, latarniami i liniami energetycznymi.</span></div>
+        </article>
+        <article class="tile reveal">
+          <img src="assets/img/moc-ladowanie.webp" alt="Karol ładuje się przy szafce elektrycznej" loading="lazy" width="1100" height="619">
+          <div class="tile-txt"><b>Ładowanie z gniazdka</b><span>Energię uzupełniasz z gniazdek, szafek i transformatorów.</span></div>
+        </article>
+        <article class="tile reveal">
+          <img src="assets/img/moc-wysysanie.webp" alt="Wysysanie prądu z latarni między wieżowcami" loading="lazy" width="1100" height="619">
+          <div class="tile-txt"><b>Pioruny z rąk</b><span>Wysysasz prąd z ulicy i oddajesz go jako wyładowanie.</span></div>
+        </article>
+        <article class="tile t-wide reveal">
+          <img src="assets/img/fabula-telebim.webp" alt="Telebim na Placu Zamkowym z Vanderholtem" loading="lazy" width="1100" height="619">
+          <div class="tile-txt"><b>Miasto ogląda Cię w wiadomościach</b><span>Telebimy, witryny RTV i gazety pokazują, jak kraj widzi Karola.</span></div>
+        </article>
+        <article class="tile t-half reveal">
+          <img src="assets/img/moc-burza.webp" alt="Piorun z burzy ładuje Karola na dachu" loading="lazy" width="1100" height="619">
+          <div class="tile-txt"><b>Burza to darmowa energia</b><span>Pogoda zmienia się sama. Stań na dachu w czasie burzy, a piorun naładuje Cię o 60 energii.</span></div>
+        </article>
+        <article class="tile t-half reveal">
+          <img src="assets/img/moc-drzewko.webp" alt="Drzewko mocy z czterema gałęziami" loading="lazy" width="1100" height="619">
+          <div class="tile-txt"><b>Drzewko mocy</b><span>Cztery gałęzie: Błyskawica, Piorun, Uderzenie z nieba i Rdzeń.</span></div>
+        </article>
+      </div>
 
-        <div class="game-body">
-          <div>
-            <p><strong>Karola trafia piorun.</strong> Budzi się w szpitalu, w którym skalpel nie przecina mu skóry, a lampy na sali ładują go jak baterię. Kilka minut później cały kraj szuka potwora, a miliarder Henryk Vanderholt wypuszcza na miasto swoje drony bojowe.</p>
-            <p>Socketborn to gra akcji w otwartym świecie, zbudowanym z prawdziwych danych o Warszawie: budynków z GUGiK i ulic z OpenStreetMap. Od Starego Miasta po Wolę, Pragę i Stadion Narodowy.</p>
-            <ul class="powers">
-              <li><b>Przeskok po liniach</b><span>Zamieniasz się w prąd i lecisz trakcją tramwajową, latarniami i liniami energetycznymi.</span></li>
-              <li><b>Ładowanie z gniazdka</b><span>Energia kończy się szybko. Uzupełniasz ją z gniazdek, szafek i transformatorów.</span></li>
-              <li><b>Pioruny z rąk</b><span>Strzelasz wyładowaniami, a wyssany z ulicy prąd wraca jako uderzenie z nieba.</span></li>
-              <li><b>Kampania fabularna</b><span>Kolejne akty z przerywnikami, napisami i misjami w całym mieście.</span></li>
-            </ul>
-            <div class="actions">
-              <a class="btn ghost" href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">Śledź postępy na TikToku</a>
-            </div>
-          </div>
-          <figure class="trailer">
-            <video controls playsinline preload="none" poster="assets/video/zwiastun-poster.webp" width="540" height="960">
-              <source src="assets/video/socketborn-zwiastun.mp4" type="video/mp4">
-            </video>
-            <small>Zwiastun z rozgrywki, 35 s</small>
-          </figure>
+      <div class="city reveal">
+        <div class="city-img">
+          <img src="assets/img/warszawa-stadion.webp" alt="Stadion Narodowy i Praga z lotu ptaka" loading="lazy" width="1100" height="619">
         </div>
+        <div class="city-txt">
+          <h3>Prawdziwa Warszawa</h3>
+          <p>Ulice, budynki i teren pochodzą z otwartych danych o mieście. Przelatujesz nad tymi samymi dachami, które widać z okna.</p>
+          <dl class="facts">
+            <div><dt>Budynki 3D</dt><dd>GUGiK</dd></div>
+            <div><dt>Ulice i tory</dt><dd>OpenStreetMap</dd></div>
+            <div><dt>Dzielnice</dt><dd>Stare Miasto, Śródmieście, Wola, Praga</dd></div>
+          </dl>
+        </div>
+      </div>
 
-        <div class="gallery" aria-label="Zrzuty ekranu z Socketborn">
-          <button class="shot" data-full="assets/img/zuraw.webp"><img src="assets/img/zuraw-640.webp" alt="Karol na wysięgniku żurawia 168 m nad budową" loading="lazy" width="640" height="360"></button>
-          <button class="shot" data-full="assets/img/uderzenie.webp"><img src="assets/img/uderzenie-640.webp" alt="Wyładowanie z wyssanej trakcji na torach" loading="lazy" width="640" height="360"></button>
-          <button class="shot" data-full="assets/img/lot.webp"><img src="assets/img/lot-640.webp" alt="Lot nad kamienicami Starego Miasta" loading="lazy" width="640" height="360"></button>
-          <button class="shot" data-full="assets/img/burza.webp"><img src="assets/img/burza-640.webp" alt="Burza i piorun między wieżowcami nocą" loading="lazy" width="640" height="360"></button>
-          <button class="shot" data-full="assets/img/wisla-noc.webp"><img src="assets/img/wisla-noc-640.webp" alt="Światła miasta odbite w Wiśle nocą" loading="lazy" width="640" height="360"></button>
-          <button class="shot" data-full="assets/img/srodmiescie.webp"><img src="assets/img/srodmiescie-640.webp" alt="Śródmieście i wieżowce z lotu ptaka" loading="lazy" width="640" height="360"></button>
+      <div class="carousel-head">
+        <h3 class="mini-h">Galeria</h3>
+        <div class="car-btns">
+          <button type="button" class="round" data-dir="-1" aria-label="Poprzednie zdjęcie">‹</button>
+          <button type="button" class="round" data-dir="1" aria-label="Następne zdjęcie">›</button>
         </div>
-      </article>
-
-      <!-- Barierka -->
-      <article class="game pixel" id="barierka" aria-labelledby="ba-h">
-        <div class="game-art">
-          <img src="assets/img/barierka-miasto-noca.webp" alt="Pikselowy biegacz na barierce, w tle miasto nocą i neony" width="1200" height="624">
-          <div class="game-title">
-            <div class="chips">
-              <span class="chip live">Gotowa · wersja 1.0</span>
-              <span class="chip">Przeglądarka · telefon</span>
-            </div>
-            <h3 id="ba-h" class="pixel-title">Barierka</h3>
-            <p class="tagline">Bieg po autostradowych barierkach.</p>
-          </div>
-        </div>
-
-        <div class="game-body">
-          <div>
-            <p><strong>Mały biegacz, długa barierka, ruch pod spodem.</strong> Przeskakujesz dziury, beczki i opony, zbierasz odblaski i walczysz o trzy gwiazdki na każdym poziomie. Na końcu czeka Szef budowy.</p>
-            <ul class="powers">
-              <li><b>10 poziomów</b><span>Od zmierzchu przez mgłę, zimę i burzę do finału o świcie.</span></li>
-              <li><b>Duch rekordu</b><span>Ścigasz się z bladą kopią własnego najlepszego przejścia.</span></li>
-              <li><b>Trzy powerupy</b><span>Niebieski taranuje wrogów, czerwony przyspiesza, żółty wybija wyżej.</span></li>
-              <li><b>Na każdym ekranie</b><span>Klawiatura albo dotyk, po polsku lub po angielsku, bez instalacji.</span></li>
-            </ul>
-            <div class="actions">
-              <a class="btn" href="barierka/">Zagraj w przeglądarce</a>
-            </div>
-          </div>
-          <div class="gallery solo" aria-label="Zrzuty ekranu z Barierki">
-            <button class="shot" data-full="assets/img/barierka-start.webp"><img src="assets/img/barierka-start-640.webp" alt="Ekran startowy Barierki" loading="lazy" width="640" height="360"></button>
-            <button class="shot" data-full="assets/img/barierka-zima.webp"><img src="assets/img/barierka-zima-640.webp" alt="Poziom 6, zima" loading="lazy" width="640" height="360"></button>
-            <button class="shot" data-full="assets/img/barierka-mgla.webp"><img src="assets/img/barierka-mgla-640.webp" alt="Poziom 5, estakada we mgle" loading="lazy" width="640" height="360"></button>
-            <button class="shot" data-full="assets/img/barierka-final.webp"><img src="assets/img/barierka-final-640.webp" alt="Poziom 10, finał o świcie" loading="lazy" width="640" height="360"></button>
-          </div>
-        </div>
-      </article>
+      </div>
+    </div>
+    <div class="carousel" tabindex="0" aria-label="Zrzuty ekranu z Socketborn">
+      <button class="shot" data-full="assets/img/zuraw.webp"><img src="assets/img/zuraw-640.webp" alt="Karol na wysięgniku żurawia 168 m nad budową" loading="lazy" width="640" height="360"></button>
+      <button class="shot" data-full="assets/img/uderzenie.webp"><img src="assets/img/uderzenie-640.webp" alt="Wyładowanie z wyssanej trakcji na torach" loading="lazy" width="640" height="360"></button>
+      <button class="shot" data-full="assets/img/lot.webp"><img src="assets/img/lot-640.webp" alt="Lot nad kamienicami Starego Miasta" loading="lazy" width="640" height="360"></button>
+      <button class="shot" data-full="assets/img/fabula-witryna.webp"><img src="assets/img/fabula-witryna.webp" alt="Witryna sklepu RTV z wiadomościami" loading="lazy" width="1100" height="619"></button>
+      <button class="shot" data-full="assets/img/burza.webp"><img src="assets/img/burza-640.webp" alt="Burza i piorun między wieżowcami nocą" loading="lazy" width="640" height="360"></button>
+      <button class="shot" data-full="assets/img/bohater-ladowanie.webp"><img src="assets/img/bohater-ladowanie.webp" alt="Karol z żyłami pełnymi energii" loading="lazy" width="1100" height="619"></button>
+      <button class="shot" data-full="assets/img/wisla-noc.webp"><img src="assets/img/wisla-noc-640.webp" alt="Światła miasta odbite w Wiśle nocą" loading="lazy" width="640" height="360"></button>
+      <button class="shot" data-full="assets/img/srodmiescie.webp"><img src="assets/img/srodmiescie-640.webp" alt="Śródmieście i wieżowce z lotu ptaka" loading="lazy" width="640" height="360"></button>
     </div>
   </section>
 
-  <section id="studio" aria-labelledby="studio-h">
-    <div class="wrap about">
-      <div>
-        <div class="section-head">
-          <span class="eyebrow">Studio</span>
-          <h2 id="studio-h">Jedna osoba, dużo prądu</h2>
+  <!-- BARIERKA -->
+  <section class="game-sec bar-sec" id="barierka" aria-labelledby="ba-h">
+    <div class="shell">
+      <header class="sec-head">
+        <p class="eyebrow">Gotowa · wersja 1.0</p>
+        <h2 id="ba-h" class="px ba-title">Barierka</h2>
+        <p class="sub">Bieg po autostradowych barierkach. Zagraj od razu, bez instalacji.</p>
+      </header>
+
+      <div class="console reveal">
+        <div class="screen" id="screen">
+          <img src="assets/img/barierka-start.webp" alt="Ekran startowy Barierki" width="1280" height="720">
+          <button type="button" class="play" id="play">
+            <span class="play-ico" aria-hidden="true"></span>
+            Zagraj tutaj
+          </button>
         </div>
-        <p>Milklosh studio to jednoosobowe, niezależne studio gier. Każdą grę projektuję, programuję i testuję sam, a postępy pokazuję na bieżąco na TikToku.</p>
-        <p>Socketborn trafi na itch.io, kiedy będzie gotowy. Barierka jest już skończona i możesz w nią zagrać od razu na tej stronie.</p>
+        <div class="console-bar">
+          <span class="keys"><kbd>←</kbd><kbd>→</kbd> bieg <kbd>Spacja</kbd> skok <kbd>↓</kbd> kucnięcie <kbd>P</kbd> pauza</span>
+          <a class="btn small" href="barierka/" target="_blank" rel="noopener">Pełny ekran ↗</a>
+        </div>
       </div>
-      <aside class="contact" aria-label="Kontakt">
+
+      <div class="ba-grid">
+        <div class="ba-txt reveal">
+          <p class="big"><strong>Mały biegacz, długa barierka, ruch pod spodem.</strong> Przeskakujesz dziury, beczki i opony, zbierasz odblaski i walczysz o trzy gwiazdki na każdym poziomie.</p>
+          <ul class="ticks">
+            <li><b>Duch rekordu.</b> Ścigasz się z bladą kopią własnego najlepszego przejścia.</li>
+            <li><b>Trzy powerupy.</b> Niebieski taranuje wrogów, czerwony przyspiesza, żółty wybija wyżej.</li>
+            <li><b>Szef budowy.</b> Finał na arenie z bossem, który rzuca beczkami i oponami.</li>
+            <li><b>Klawiatura albo dotyk.</b> Po polsku lub po angielsku, na komputerze i telefonie.</li>
+          </ul>
+        </div>
+        <ol class="levels reveal" aria-label="Poziomy">
+          <li style="--c:#e58a5b">Zmierzch</li>
+          <li style="--c:#5b7fe5">Noc w deszczu</li>
+          <li style="--c:#8a8fa0">Tunel</li>
+          <li style="--c:#b8c2cc">Mgła o świcie</li>
+          <li style="--c:#c9a4e8">Estakada</li>
+          <li style="--c:#dff3ff">Zima</li>
+          <li style="--c:#ffb04a">Zachód słońca</li>
+          <li style="--c:#ff5fae">Miasto nocą</li>
+          <li style="--c:#9ad3ff">Burza</li>
+          <li style="--c:#ffd23f">Finał o świcie</li>
+        </ol>
+      </div>
+
+      <div class="px-gallery">
+        <button class="shot" data-full="assets/img/barierka-zima.webp"><img src="assets/img/barierka-zima-640.webp" alt="Poziom 6, zima" loading="lazy" width="640" height="360"></button>
+        <button class="shot" data-full="assets/img/barierka-mgla.webp"><img src="assets/img/barierka-mgla-640.webp" alt="Poziom 5, estakada we mgle" loading="lazy" width="640" height="360"></button>
+        <button class="shot" data-full="assets/img/barierka-final.webp"><img src="assets/img/barierka-final-640.webp" alt="Poziom 10, finał o świcie" loading="lazy" width="640" height="360"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- KULISY -->
+  <section class="kulisy" id="kulisy" aria-labelledby="ku-h">
+    <div class="shell kulisy-in">
+      <div class="kulisy-txt reveal">
+        <p class="eyebrow">Za kulisami</p>
+        <h2 id="ku-h">Gra powstaje na oczach widzów</h2>
+        <p>Nowe moce, poprawki miasta i wpadki z testów lądują najpierw na TikToku. Tam widać, jak Socketborn rośnie z tygodnia na tydzień.</p>
+        <a class="btn" href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">@milklosh.studio na TikToku</a>
+      </div>
+      <figure class="phone small reveal">
+        <video controls playsinline preload="none" poster="assets/video/kulisy-trawa-poster.webp" width="540" height="960">
+          <source src="assets/video/kulisy-trawa.mp4" type="video/mp4">
+        </video>
+        <figcaption>Jeden z filmów z TikToka · 17 s</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- STUDIO / KONTAKT -->
+  <section class="studio" id="kontakt" aria-labelledby="st-h">
+    <div class="shell studio-in">
+      <div class="reveal">
+        <p class="eyebrow">Studio</p>
+        <h2 id="st-h">Jedna osoba, dużo prądu</h2>
+        <p class="studio-p">Milklosh studio to jednoosobowe, niezależne studio gier. Każdą grę projektuję, programuję i testuję sam. Socketborn trafi na itch.io, kiedy będzie gotowy, a w Barierkę możesz zagrać już teraz.</p>
+      </div>
+      <aside class="contact reveal" aria-label="Kontakt">
         <span class="label">Napisz</span>
         <span class="mail">milkosh.studio@gmail.com</span>
-        <div class="actions">
+        <div class="row">
           <button class="btn" type="button" data-copy="milkosh.studio@gmail.com">Kopiuj adres</button>
           <a class="btn ghost" href="mailto:milkosh.studio@gmail.com">Otwórz pocztę</a>
         </div>
         <span class="copied" aria-live="polite"></span>
-        <span class="label">Obserwuj</span>
-        <a class="social" href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">TikTok · @milklosh.studio</a>
       </aside>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 Milklosh studio</span>
-    <span>Mapa w Socketborn: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (ODbL), Overture Maps; budynki 3D: GUGiK, geoportal.gov.pl (CC BY 4.0).</span>
+<footer class="foot">
+  <div class="shell foot-in">
+    <div class="foot-brand">
+      <img src="assets/img/znak.png" alt="" width="22" height="22">
+      <span>© 2026 Milklosh studio</span>
+    </div>
+    <nav aria-label="Stopka">
+      <a href="#socketborn">Socketborn</a>
+      <a href="#barierka">Barierka</a>
+      <a href="https://www.tiktok.com/@milklosh.studio" target="_blank" rel="noopener">TikTok</a>
+    </nav>
+    <p class="attr">Mapa w Socketborn: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (ODbL), Overture Maps; budynki 3D: GUGiK, geoportal.gov.pl (CC BY 4.0).</p>
   </div>
 </footer>
 
